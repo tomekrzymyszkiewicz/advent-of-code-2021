@@ -1,3 +1,5 @@
+# program wczytuje dane z pliku input.txt i umieszcza każdą liczbę w liście input_list
+# iterując listę input_list od 1 do końca sprawdza czy poprzednia liczba jest mniejsza od bieżącej i zlicza takie przypadki
 with open('input.txt') as input:
     lines = input.readlines()
 input_list = [int(num) for num in lines]
