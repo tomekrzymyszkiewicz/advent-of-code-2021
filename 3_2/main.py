@@ -5,7 +5,7 @@
 # pobeiram jedyny element jaki został
 # powtarzam to dla dominującego zera
 #wypisuje iloczyn otrzymanych liczb
-file_name = '3_2/input.txt'
+file_name = 'input.txt'
 with open(file_name) as input:
     numbers_input = input.readlines()
 numbers_binary = [int(number.strip('\n'), 2) for number in numbers_input]
