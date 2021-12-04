@@ -1,4 +1,6 @@
-
+#   wczytuje listę liczb bingo oraz plansze
+#   następnie iterując po liczbach bingo przeszukuje plansze i oznaczam pola odznaczone
+#   sprawdzam wiersze i kolumny w poszukiwaniu linii w pełni zaznaczonych i jeśli taką znajdę zwracam sumę nieoznaczonych pól pomnożoną razy liczbę bingo
 
 file_name = 'input.txt'
 numbers = []

@@ -1,4 +1,8 @@
-
+#   wczytuje listę liczb bingo oraz plansze
+#   następnie iterując po liczbach bingo przeszukuje plansze i oznaczam pola odznaczone
+#   sprawdzam wiersze i kolumny w poszukiwaniu linii w pełni zaznaczonych i jeśli taką znajdę oznaczam ją jaką wygraną
+#   za każdym sprawdzanym numerem sprawdzam czy nie została tylko 1 niewygrana tablica i wtedy zapisuje ten fakty i numer tablicy
+# jeżeli to wystąpi sprawdzam jaki numer jest wygrywający i zwracam iloczyn ostatniej liczby i sumy nieoznaczonych pól
 
 file_name = 'input.txt'
 numbers = []
