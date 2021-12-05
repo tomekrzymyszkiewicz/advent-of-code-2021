@@ -1,4 +1,4 @@
-file_name = '5_1/input.txt'
+file_name = 'input.txt'
 vectors = []
 field = []
 
