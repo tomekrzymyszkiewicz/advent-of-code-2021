@@ -1,3 +1,6 @@
+# wczytuje wszystkie wektory i iteruje po nich szukając tych które mają 1 wspólną składową
+# jeśli takie znajde to dodaje 1 na tablicy field w miejscach gdzie przechodzi dany wektor
+# na koniec zliczam pola gdzie wartość jest>= 2
 file_name = 'input.txt'
 vectors = []
 field = []
