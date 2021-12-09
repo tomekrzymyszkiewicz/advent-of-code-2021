@@ -1,15 +1,5 @@
 file_name = '8_2/input.txt'
 values = []
-# dictionaries = []
-# digits_to_number = {'gcebaf':0,'cf': 1,'egadc':2,'dfgca':3,'bcdf':4,'gadfb':5,'gadebf':6,'acf':7,'cgbaedf':8,'gbdcfa':9}
-#   8:  
-#  aaaa  
-# b    c 
-# b    c 
-#  dddd  
-# e    f 
-# e    f 
-#  gggg 
 
 def main():
     with open(file_name, 'r') as input:
@@ -17,7 +7,6 @@ def main():
         values = [[[sequence.strip(' ') for sequence in segment.split(' ') if sequence.strip(' ') != ''] for segment in line.strip('\n').split('|')] for line in lines]
     sum = 0
     for i,line in enumerate(values):
-        # dictionary = {'a':'','b':'','c':'','d':'','e':'','f':'','g':''}
         dictionary = {0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''}
         for sequence in line[0]:
             if len(sequence) == 2:
