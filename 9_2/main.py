@@ -69,7 +69,6 @@ def main():
                                 new_point = True
                                 heightmap[basin_point[0]+1][basin_point[1]][2] = True
                     if not new_point:
-                        print('break')
                         break
                 basin_sizes.append(len(local_basin_points))
     basin_sizes.sort(reverse=True)
