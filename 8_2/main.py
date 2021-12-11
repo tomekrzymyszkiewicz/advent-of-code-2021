@@ -1,13 +1,16 @@
-file_name = '8_2/input.txt'
+file_name = 'input.txt'
 values = []
+
 
 def main():
     with open(file_name, 'r') as input:
         lines = input.readlines()
-        values = [[[sequence.strip(' ') for sequence in segment.split(' ') if sequence.strip(' ') != ''] for segment in line.strip('\n').split('|')] for line in lines]
+        values = [[[sequence.strip(' ') for sequence in segment.split(' ') if sequence.strip(
+            ' ') != ''] for segment in line.strip('\n').split('|')] for line in lines]
     sum = 0
-    for i,line in enumerate(values):
-        dictionary = {0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''}
+    for i, line in enumerate(values):
+        dictionary = {0: '', 1: '', 2: '', 3: '',
+                      4: '', 5: '', 6: '', 7: '', 8: '', 9: ''}
         for sequence in line[0]:
             if len(sequence) == 2:
                 dictionary[1] = sequence
@@ -19,17 +22,19 @@ def main():
                 dictionary[8] = sequence
         while min([len(item) for item in dictionary.values()]) == 0:
             for sequence in line[0]:
-                if len(sequence) == 5: #2 3 or 5
-                    if all(item in sequence for item in dictionary[7]): 
+                if len(sequence) == 5:  # 2 3 or 5
+                    if all(item in sequence for item in dictionary[7]):
                         dictionary[3] = sequence
-                    elif all(item in dictionary[9] for item in sequence): 
+                    elif all(item in dictionary[9] for item in sequence):
                         dictionary[5] = sequence
-                    elif dictionary[9] != '':    
+                    elif dictionary[9] != '':
                         dictionary[2] = sequence
-                elif len(sequence) == 6: #0 9 or 6
-                    if all(item in sequence for item in dictionary[4]): # 4 in 9
+                elif len(sequence) == 6:  # 0 9 or 6
+                    # 4 in 9
+                    if all(item in sequence for item in dictionary[4]):
                         dictionary[9] = sequence
-                    elif all(item in sequence for item in dictionary[7]): # 7 in 0
+                    # 7 in 0
+                    elif all(item in sequence for item in dictionary[7]):
                         dictionary[0] = sequence
                     elif dictionary[7] != '':
                         dictionary[6] = sequence
@@ -58,6 +63,7 @@ def main():
         current_sum = int("".join(str(i) for i in number))
         sum += current_sum
     return sum
+
 
 if __name__ == "__main__":
     print(main())
