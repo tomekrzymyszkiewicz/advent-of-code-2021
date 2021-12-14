@@ -1,6 +1,5 @@
-from os import replace
 from collections import Counter
-file_name = '14_1/input.txt'
+file_name = 'input.txt'
 
 def main(steps):
     lines = [line.strip('\n') for line in open(file_name,'r')]
