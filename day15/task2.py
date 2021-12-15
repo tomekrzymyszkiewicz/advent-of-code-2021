@@ -1,4 +1,5 @@
 import heapq
+import itertools
 file_name = 'input.txt'
 lines = [line.strip('\n') for line in open(file_name, 'r')]
 G = {}
@@ -26,7 +27,24 @@ def dijkstra(graph, start, end):
     return -1
 
 
+def increase_level(num, level): return str(((num+level-1) % 9)+1)
+
+
 def main():
+    initial_size = len(lines[0])
+    for i in range(len(lines[0])):
+        int_line = [int(val) for val in list(lines[i])]
+        new_line = [''.join(
+            list(map(increase_level, int_line, itertools.repeat(j)))) for j in range(5)]
+        lines[i] = ''.join(new_line)
+
+    for j in range(1, 5):
+        for i in range(initial_size):
+            int_line = [int(val) for val in list(lines[i])]
+            new_line = ''.join(
+                list(map(increase_level, int_line, itertools.repeat(j))))
+            lines.append(new_line)
+
     for i, line in enumerate(lines):
         for j, point in enumerate(line):
             G[(i, j)] = [[adjacent_point, int(lines[adjacent_point[0]]
