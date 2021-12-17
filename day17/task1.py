@@ -1,5 +1,5 @@
 import re
-file_name = 'day17/input.txt'
+file_name = 'input.txt'
 input = open(file_name, 'r').readline().rstrip('\n').lstrip('target area: ')
 ta_x_min,ta_x_max,ta_y_min,ta_y_max = [int(val) for val in re.findall(r"-*\d+",input)]  
   
